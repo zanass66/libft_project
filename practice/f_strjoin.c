@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 11:10:46 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/16 11:15:16 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/19 15:32:15 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,40 +23,30 @@ static size_t	ft_strlen(const char *s)
 }
 char *ft_strjoin(char const *s1, char const *s2)
 {
-    size_t s1_len;
-    size_t s2_len;
-    size_t total_len;
-    size_t i;
-    size_t j;
-    char *join_str;
+    size_t s1_len  = ft_strlen(s1);
+    size_t s2_len = ft_strlen(s2);
     if(!s1 || !s2)
-        return (NULL);
-    s1_len = ft_strlen(s1);
-    s2_len = ft_strlen(s2);
-    total_len = s1_len + s2_len;
-    join_str = malloc (total_len + 1);
+        return NULL;
+    size_t total = s1_len + s2_len;
+    char *join_str = malloc(total + 1);
     if(!join_str)
-        return (NULL);
-    i = 0;
+        return NULL;
+    int i = 0;
     while(i < s1_len)
     {
         join_str[i] = s1[i];
         i++;
     }
-    j = 0;
+    int j = 0;
     while(j < s2_len)
     {
-        join_str[i+j] = s2[j];
+        join_str[i + j] = s2[j];
         j++;
     }
-    join_str[i + j] = '\0';
+    join_str[i+j] = '\0';
     return (join_str);
 }
-
-int main()
+int main(void)
 {
-     // Exemple : str 1 = "Hello"
-                //str 2 = "anass"
-            // joining string "helloanass";
-     printf("%s\n",ft_strjoin("hello", "anass"));
+    printf("%s\n",ft_strjoin("hello","anass"));
 }

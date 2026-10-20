@@ -1,0 +1,77 @@
+#include "libft.h"
+
+// 1. Memory Leak Preventer
+static void	*free_array(char **strs, size_t count)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < count)
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
+	return (NULL);
+}
+
+// 2. The Word Counter
+static size_t	count_words(char const *s, char c)
+{
+	size_t	count;
+	size_t	i;
+
+	count = 0;
+	i = 0;
+	while (s[i])
+	{
+		// A word starts if current char is NOT 'c' 
+		// AND the previous char WAS 'c' (or we are at the very beginning)
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
+	}
+	return (count);
+}
+
+// 3. The Extraction Engine
+static char	**extract_words(char const *s, char c, char **strs)
+{
+	size_t	i;
+	size_t	j;
+	size_t	start;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			strs[j] = ft_substr(s, start, i - start);
+			if (!strs[j])
+				return (free_array(strs, j));
+			j++;
+		}
+		else
+			i++;
+	}
+	strs[j] = NULL; // Seal the array!
+	return (strs);
+}
+
+// 4. The Main Function
+char	**ft_split(char const *s, char c)
+{
+	char	**strs;
+
+	if (!s)
+		return (NULL);
+	// Allocate master array: (number of words + 1 for the NULL terminator)
+	strs = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!strs)
+		return (NULL);
+	return (extract_words(s, c, strs));
+}

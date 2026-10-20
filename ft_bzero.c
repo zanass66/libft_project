@@ -6,11 +6,11 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 09:21:53 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/14 09:24:54 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/18 20:17:18 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -24,15 +24,4 @@ void	ft_bzero(void *s, size_t n)
 		ptr[i] = '\0';
 		i++;
 	}
-}
-int main()
-{
-    char buffer[10]; 
-    ft_bzero(buffer,sizeof(char) * 3);
-    int i = 0;
-    while(i < 3)
-    {
-        printf("%d\n",buffer[i]);
-        i++;
-    }
 }

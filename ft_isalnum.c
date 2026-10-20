@@ -6,13 +6,15 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 17:06:40 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/13 17:06:44 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/18 19:47:36 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_alphanumeric(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
-    if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
-        return 1;
-    return 0;
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
 }

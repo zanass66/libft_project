@@ -1,13 +1,10 @@
 // concept of void pointer in c
 #include <stdio.h>
-int main()
+int main(void)
 {
-    int a = 10;
-    int b = 20;
-    void *ptr = &a;
-    void *ptr = &b;
-    printf("value of a: %d\n", *(int *)ptr);
-    // ptr = &b;
-    // printf("value of b: %c\n", *(char *)ptr);
-    return 0;
+    void *p;
+    int *ip;
+    
+    printf("%zu\n",sizeof(p)); //8 byte
+    printf("%zu\n",sizeof(ip));// 8 byte
 }

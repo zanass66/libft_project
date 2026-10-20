@@ -6,11 +6,11 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 16:35:54 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/14 09:12:39 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/19 19:59:35 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -21,3 +21,7 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+// int main(void)
+// {
+// 	ft_strlen("Hello");
+// }

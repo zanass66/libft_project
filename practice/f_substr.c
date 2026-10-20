@@ -1,41 +1,39 @@
-#include <stdio.h>
+
 #include <string.h>
-char *ft_substr(char const *s, unsigned int start, size_t len);
-// int main(void)
-// {
-//     char str[] = "Hello , Anass";
-//     char ss[20];
-//     strncpy(ss, str+7, 5);
-//     ss[5] = '\0';
-//     printf("%s", ss);
-//     return 0;
-// }
-// void    getSub(char *str, char *ss, int pos, int len)
-// {
-//     int i = 0;
-//     while(i < len)
-//     {
-//         ss[i] = str[pos + i];
-//         i++;
-//     }
-//     ss[i] = '\0';
-// }
-// int main(void)
-// {
-//     char string[] = "Hello, Anass";
-//     char ss[20];
-//     getSub(string, ss, 7,5);
-//     printf("%s", ss);
-//     return 0;
-// }
-char *ft_substr(char const *s, unsigned int start, size_t len)
+#include <stdio.h>
+#include <stdlib.h>
+char *ft_substr(char const *str, unsigned int index, size_t len)
 {
-    unsigned int i = 0;
+    size_t str_len = strlen(str);
+    size_t i;
+    char *substr;
+    if(!str)
+        return NULL;
+    if(index >= str_len)
+        len = 0;
+    else if(len > (str_len - index))
+        len = (str_len - index);
+    substr = malloc(1 * len);
+    if(!substr)
+        return NULL;
+    i = 0;
     while(i < len)
     {
-        str[i] = str[start + i];
+        substr[i] = str[index + i];
         i++;
     }
-    str[i] = '\0';
-    return str[i];
+    substr[i] = '\0';
+    return substr;
+}
+int main(void)
+{
+    char string[] = "anass.zeroual@etu.uae.ac.ma"; // len 27 - 14
+    char *substr = ft_substr(string,13,14);
+    int i = 0;
+    while(i < 13)
+    {
+        printf("%c",substr[i]);
+        i++;
+    }
+    printf("\n");
 }

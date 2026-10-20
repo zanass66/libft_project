@@ -6,29 +6,16 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 19:56:59 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/15 19:57:54 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/19 14:10:54 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 //ft_calloc(5,4) --> allocate 5 items that are 4 bytes each .
-static void	ft_bzero(void *s, size_t n)
-{
-	unsigned char	*ptr;
-	size_t			i;
-
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
-	{
-		ptr[i] = '\0';
-		i++;
-	}
-}
+#include "libft.h"
 void *ft_calloc(size_t nmemb, size_t size)
 {
     void *ptr;
-    if(size != 0 && (nmemb *size) / size != nmemb) //handle the overflow
+    if(size != 0 && size > (size_t)-1 / nmemb) //handle the overflow
         return NULL;
     ptr = malloc(nmemb * size);
     if(!ptr)
