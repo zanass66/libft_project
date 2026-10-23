@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 10:38:29 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/20 12:03:57 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/22 16:54:28 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	strs = malloc(count_words(s, c) + 1);
+	strs = malloc(sizeof(char*) * (count_words(s, c) + 1));
 	if (!strs)
 		return (NULL);
 	return (extract_words(s, c, strs));

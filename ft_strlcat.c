@@ -6,20 +6,10 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:37:26 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/14 12:40:53 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/10/20 21:27:35 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
