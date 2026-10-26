@@ -19,21 +19,22 @@ node *p;
 void createfirst(int val)
 {
     a = (node*)malloc(sizeof(node));
-    a->data = val; //Follow the pointer a to the allocated node structure, access its data member, and store val inside it.
-    a->next = NULL;
-}
+    a->data = val; //Follow the pointer (a) to the allocated node structure, access its data member, and store val inside it.
+    a->next = (NULL);// pointer that doesn't point to anything .
+} 
 //------add a node ----------//
 void addnode(int val)
 {
-    first = a;
+    first = a;//copies the memory address stored in head pointer a into first
+    //same pointers point to the same stating node.
     while(first->next != NULL)
     {
         first = first->next;
     }
     second = (node*)malloc(sizeof(node));//tha address of node it will store on second
-    second->data = val;
+    second->data = val; 
     second->next = NULL;
-    first->next = second;
+    first->next = second; 
 }
 //--------add befor first node----------------//
 void    AddBeforFirst(int val)
