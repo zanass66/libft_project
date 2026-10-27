@@ -33,7 +33,7 @@ void addnode(int val)
     }
     second = (node*)malloc(sizeof(node));//tha address of node it will store on second
     second->data = val; 
-    second->next = NULL;
+    second->next = (NULL);
     first->next = second; 
 }
 //--------add befor first node----------------//
