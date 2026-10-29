@@ -36,6 +36,9 @@ int main(void)
     c.value = 30;
     c.next = NULL
 } 
-struct node *a;  a->value = 10; a->next = &b;
+struct node *head;  head->value = 10; head->next = &b;
+head = head->next; //now the head become node b 
 struct node *b;  b->value = 20; b->next = &c;
-struct node *c;  c->value = 30; c->next = NULL;
+head = head->next; // this mean that's the head point to the next node
+struct node *c;  c->value = 30; c->next = &d;
+struct node *d;  d->value = 40; d-next = NULL;

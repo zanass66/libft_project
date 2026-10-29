@@ -25,11 +25,16 @@ void createfirst(int val)
 //------add a node ----------//
 void addnode(int val)
 {
-    first = a;//copies the memory address stored in head pointer a into first
+    /*A cursor pointer is simply a temporary variable used to traverse a linked
+     list without losing the head reference. As you move through the nodes, the 
+     cursor is updated to point to the next element, such as `first = first->next`. 
+     This allows your code to inspect or modify list data sequentially.*/
+    
+     first = a;//copies the memory address stored in head pointer a into first
     //same pointers point to the same stating node.
     while(first->next != NULL)
     {
-        first = first->next;
+        first = first->next; //first will point to the next node
     }
     second = (node*)malloc(sizeof(node));//tha address of node it will store on second
     second->data = val; 
