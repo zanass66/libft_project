@@ -10,15 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-static size_t ft_strlen(const char *s)
-{
-    size_t i = 0;
-    while(s[i])
-        i++;
-    return i;
-}
+#include "libft.h"
+
 char *ft_strdup(const char *s)
 {
     int s_len; 
@@ -37,7 +30,7 @@ char *ft_strdup(const char *s)
     new_array[i] = '\0';
     return (new_array);
 }
-int main(void)
+/*int main(void)
 {
     char src[] = "hello";
     char *dup;
@@ -48,4 +41,4 @@ int main(void)
         free(dup);
     }
     return 0;
-}
+}*/
