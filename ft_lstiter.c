@@ -1,38 +1,34 @@
 #include "libft.h"
-
-void	ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	if (!lst || !f)
-		return ;
-	while (lst)
-	{
-		f(lst->content);
-		lst = lst->next;
-	}
-}
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if(!lst || !f)
+		return;
+	while(lst != NULL)
+	{
+		f(ls->content);
+		lst = lst->next;
+	}
+}
+
 
 // Example function to apply to each node's content: converts lowercase string to uppercase
-void	to_uppercase(void *content)
+void to_upercase(void *content)
 {
-	char	*str;
-	int		i;
-
-	if (!content)
-		return ;
-	str = (char *)content;
-	i = 0;
-	while (str[i])
+	if(!content)
+		return;
+	char *str = (char *)content;
+	int i = 0;
+	while(str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		if(str[i] >= 'a' && str[i] <= 'z')
 			str[i] -= 32;
 		i++;
 	}
 }
-
 // Cleanup helper function
 void	del_content(void *content)
 {
@@ -50,9 +46,9 @@ int	main(void)
 	head = NULL;
 
 	// 1. Create nodes with heap-allocated writable strings
-	node1 = ft_lstnew(strdup("hello"));
-	node2 = ft_lstnew(strdup("world"));
-	node3 = ft_lstnew(strdup("1337 rabat"));
+	node1 = ft_lstnew(ft_strdup("hello"));
+	node2 = ft_lstnew(ft_strdup("world"));
+	node3 = ft_lstnew(ft_strdup("1337 rabat"));
 
 	if (!node1 || !node2 || !node3)
 		return (1);

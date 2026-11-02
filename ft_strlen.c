@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 16:35:54 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/20 20:00:17 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/02 17:08:02 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,13 @@ size_t	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
+}
+int main(void)
+{
+    char arr[] = "hELLO";
+    size_t len = ft_strlen(arr);
+    size_t memory = sizeof(arr); //+ len of '\0'
+    printf("Lenght: %zu\n",len);
+    printf("Memory: %zu bytes\n",memory);
+    return (0);
 }
