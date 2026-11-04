@@ -6,11 +6,12 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 13:09:32 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/14 13:09:34 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 12:34:49 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+
 int ft_tolower(int c)
 {
     if(c >= 'A' && c <= 'Z')

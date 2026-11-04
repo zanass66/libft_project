@@ -6,11 +6,11 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:30:23 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/15 11:47:29 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 12:41:14 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

@@ -22,6 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // Custom delete function to free heap-allocated content
 void	del_content(void *content)
 {
+	printf("Deleting node content: %s\n", (char *)content);
 	free(content);
 }
 

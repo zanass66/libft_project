@@ -6,11 +6,11 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:17:27 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/18 19:38:19 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/02 15:51:16 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -38,7 +38,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	return (dest);
 }
-int main(void)
+/*int main(void)
 {
 	int arr_s[] = {1,2,3,4,5,6,7};
 	int dest[20];
@@ -50,4 +50,5 @@ int main(void)
 		i++;
 	}
 	printf("\n");
-}
+}*/
+

@@ -6,9 +6,11 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 17:01:59 by zeanass           #+#    #+#             */
-/*   Updated: 2026/10/13 17:04:06 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/02 15:53:01 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

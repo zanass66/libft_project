@@ -1,17 +1,17 @@
 #include "libft.h"
 
-// unsigned int ft_lstsize(t_list *lst)
-// {
-// 	int	count;
+unsigned int ft_lstsize(t_list *lst)
+{
+	int	count;
 
-// 	count = 0;
-// 	while (lst)
-// 	{
-// 		count++;
-// 		lst = lst->next;
-// 	}
-// 	return (count);
-// }
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
+}
 /*int main(void)
 {
     t_list *head;
@@ -39,27 +39,3 @@
     printf("\n""%d\n",ft_lstsize(head));
     return 0;
 }*/
-unsigned int ft_lstsize(t_list *lst)
-{
-    unsigned int count = 0;
-    while(lst !=  NULL)
-    {
-        count++;
-        lst = lst->next;
-    }
-    return (count);
-}
-// int  main(void)
-// {
-//    t_list *head = NULL; 
-//    t_list *node1 = ft_lstnew("ANASS"); 
-//    t_list *node2 = ft_lstnew("yassmin");
-//    t_list *node3 = ft_lstnew("Med");
-
-//    ft_lstadd_front(&head,node1);
-//    ft_lstadd_front(&head,node2);
-//    ft_lstadd_front(&head,node3);
-//    int size = ft_lstsize(head);
-//    printf("%d",size);
-//    return 0;
-// }
