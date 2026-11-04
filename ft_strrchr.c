@@ -12,16 +12,6 @@
 
 #include <stdio.h>
 // strrchr()	Right-to-Left (Reverse)	The last occurrence of a character.
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
