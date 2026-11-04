@@ -1,7 +1,7 @@
+#include "helper.h"
 
-#include "calc.h"
 int  main(void)
 {
-    printf("Total: %d\n",add_value(100,100,50));
+    print_greeting();
     return 0;
 }

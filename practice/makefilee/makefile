@@ -1,8 +1,11 @@
-app: main.o calc.o
-	gcc main.o calc.o -o app
+CC = cc
+CFLAGS = -Wall -Wextra -Wall -Werror
+
+app: main.o utils.o
+	$(CC) main.o utils.o -o app
+
 main.o: main.c
-	gcc -Wall -Wextra -Werror -c main.c -o main.o
-calc.o: calc.c
-	gcc -Wall -Wextra -Werror -c calc.c -o calc.o
-report:
-	cd /tmp && pwd
+	$(CC) $(CFLAGS) -c main.c
+
+utils.o: utils.c
+	$(CC) $(CFLAGS) -c utils.c
