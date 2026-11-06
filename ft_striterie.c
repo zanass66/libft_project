@@ -9,7 +9,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		(*f)(i, &s[i]); // Modifies s[i] directly in-place
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

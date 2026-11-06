@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:17:27 by zeanass           #+#    #+#             */
-/*   Updated: 2026/11/02 15:51:16 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 23:28:39 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	printf("\n");
 }*/
-
+/*/int main(void)
+{
+	char buffer[5];
+	printf("%s\n",ft_memmove(buffer,"1337",4))
+}*

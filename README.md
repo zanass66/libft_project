@@ -1,30 +1,46 @@
-*This project has been created as part of the 42 curriculum by azeroual.*
+*This project has been created as part of the 42 curriculum by zeanass.*
 
 ## Description
-`libft` is the first project of the 42 curriculum[cite: 1, 3, 6]. The goal of this project is to build a custom C standard library containing re-implementations of essential `libc` functions, extra string/memory utilities, and a singly linked list data structure suite[cite: 1, 9, 11, 15].
+**Libft** (Library of Functions) is a foundational project at 42 School. The goal of this project is to recreate a custom C library containing highly useful standard functions from the C library (libc), along with additional utility functions for string manipulation, memory management, and linked lists. 
 
-This library serves as a foundational tool for C programming at 42, helping develop a deep understanding of low-level memory allocation, pointer mechanics, data structures, and compilation workflows using Makefiles[cite: 3, 4, 15].
+Since C programming can be tedious without access to standard functions, this project provides a deeper understanding of how these core functions work under the hood, particularly regarding memory allocation (`malloc`, `free`) and pointer arithmetic. This library (`libft.a`) will serve as a crucial building block and allowed tool for future C school assignments in the curriculum.
 
----
+## Library Details
+The library is divided into three main components, all strictly adhering to the Norm:
 
-## Library Functions & Specifications
+**Part 1: Libc Functions**
+Reimplementations of standard C library functions with the `ft_` prefix. 
+*   **Memory:** `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc`
+*   **String/Char:** `ft_strlen`, `ft_strlcpy`, `ft_strlcat`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr`, `ft_strdup`
+*   **Classification & Transformation:** `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`, `ft_atoi`
 
-### Part 1: C Standard Library Re-implementations[cite: 9]
-* **Memory Management:** `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc`[cite: 9]
-* **String Analysis & Manipulation:** `ft_strlen`, `ft_strlcpy`, `ft_strlcat`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr`, `ft_strdup`[cite: 9]
-* **Character Classification & Conversion:** `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`, `ft_atoi`[cite: 9]
+**Part 2: Additional Functions**
+Utility functions not natively included in libc, designed to simplify string and file descriptor operations.
+*   **String Manipulation:** `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_strmapi`, `ft_striteri`
+*   **Conversion:** `ft_itoa`
+*   **File Descriptor Output:** `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
 
-### Part 2: Additional Utility Functions[cite: 11]
-* **String Allocation & Splitting:** `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_itoa`[cite: 11, 12]
-* **String Iteration & Mapping:** `ft_strmapi`, `ft_striteri`[cite: 13]
-* **File Descriptor Output:** `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`[cite: 13, 14]
+**Part 3: Linked List Functions**
+A set of functions designed to manipulate a custom singly linked list data structure (`t_list`).
+*   **Creation & Addition:** `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`
+*   **Traversal & Measurement:** `ft_lstsize`, `ft_lstlast`
+*   **Deletion & Memory Clearing:** `ft_lstdelone`, `ft_lstclear`
+*   **Iteration & Mapping:** `ft_lstiter`, `ft_lstmap`
 
-### Part 3: Singly Linked Lists (Mandatory)
-The singly linked list structure defined in `libft.h`:
+## Instructions
 
-```c
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-}   t_list;
+### Compilation
+The project includes a `Makefile` that compiles the source files into a static library (`libft.a`) using `cc` with the flags `-Wall -Wextra -Werror`. 
+
+Available commands:
+*   `make` or `make all`: Compiles the entire library and creates `libft.a`.
+*   `make clean`: Removes all compiled object files (`.o`).
+*   `make fclean`: Removes all compiled object files and the `libft.a` binary.
+*   `make re`: Fully cleans and recompiles the library.
+
+### Execution & Usage
+To use this library in your own projects:
+1. Include the header in your `.c` files: `#include "libft.h"`
+2. Compile your files alongside the library:
+   ```bash
+   cc -Wall -Wextra -Werror my_program.c -L. -lft -o my_program

@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:30:23 by zeanass           #+#    #+#             */
-/*   Updated: 2026/11/04 12:41:14 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 22:04:57 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,5 @@ int	ft_atoi(const char *nptr)
 }
 int main(void)
 {
-    char amount[] = ft_atoi("24 degrees");
-	printf("%s",amount[0]);	
+    printf("%d",ft_atoi("24 degrees"));
 }

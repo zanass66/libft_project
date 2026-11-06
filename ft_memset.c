@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 09:14:42 by zeanass           #+#    #+#             */
-/*   Updated: 2026/11/02 18:44:09 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 23:14:48 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,28 @@ void	*ft_memset(void *s, int c, size_t n)
 }
 /*int main(void)
 {
-	char buffer[3];
+	char buffer[10];
+	ft_memset(buffer,'k',sizeof(buffer));
 	size_t i = 0;
-	ft_memset(buffer, 'L',3);
-	
-	while(i < 3)
+	while(i < sizeof(buffer))
 	{
 		printf("%c",buffer[i]);
 		i++;
 	}
+	printf("\n");
 	return 0;
 }*/
+int main(void)
+{
+	int x;
+	int y;
+	ft_memset(&x, 5, 2);
+	ft_memset(&x, 57, 1);
+	ft_memset(&y, 255, 4);
+	ft_memset(&y, 255, 4);
+	ft_memset(&y, 250, 2);
+	ft_memset(&y, 199, 1);
+	
+	printf("%d\n%d", x, y);
+	return (0);
+}

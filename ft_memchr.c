@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 12:38:00 by zeanass           #+#    #+#             */
-/*   Updated: 2026/11/04 12:38:19 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 22:00:13 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 int main(void)
 {
     char email[] = "anass.zeroual@etu.uae.ac.ma";
-    char *pos = ft_memchr(email,'@',strlen(email));
+    char *pos = ft_memchr(email,'@',ft_strlen(email));
     pos++;
     printf("%s\n",pos);
     return 0;

@@ -6,7 +6,7 @@
 /*   By: zeanass <zeanass@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 11:28:04 by zeanass           #+#    #+#             */
-/*   Updated: 2026/11/04 12:40:34 by zeanass          ###   ########.fr       */
+/*   Updated: 2026/11/04 22:03:11 by zeanass          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 int main(void)
 {
-    printf("%s\n",ft_strnstr("heloo","",5));
+    printf("%s\n",ft_strnstr("heloo","l",5));
 }
